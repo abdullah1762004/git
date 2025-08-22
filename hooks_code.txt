@@ -1,0 +1,6 @@
+#!/bin/sh
+files=$(git diff --cached --name-only --diff-filter=ACM | grep '\.py$')
+flake8 $files
+
+
+this is a script that check the quality of python code before commit if code is ok has then it commit other wise not showing you all the the wrong things
